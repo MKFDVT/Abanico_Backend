@@ -9,8 +9,12 @@ public interface AbanicoService {
 	public List<Abanico> findAll();
 	
 	public Abanico findById(Long id);
-	//Pendientes
-		//@DeleteMapping
-		//@PostMapping
-		//@PutMapping
+	
+	public void DeleteAbanico (Long id);
+	
+	public void addAbanico (Abanico abanico);
+	
+	public void putAbanico (Abanico abanico);
+	
+	
 }
