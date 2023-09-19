@@ -27,5 +27,28 @@ public class AbanicoServiceImpl implements AbanicoService {
 	public Abanico findById(Long id) {
 		return AbanicoDao.findById(id).orElse(null);
 	}
+	
+	@Override
+	public void DeleteAbanico (Long id) {
+		AbanicoDao.deleteById(id);
+	}
 
+	@Override
+	public void addAbanico(Abanico abanico) {
+		
+		abanico.setName(abanico.getName());
+		abanico.setMarca(abanico.getMarca());
+		abanico.setCreateAt(abanico.getCreateAt());
+		
+		AbanicoDao.save(abanico);
+	}
+	@Override
+	public void putAbanico(Abanico abanico) {
+		
+		abanico.setName(abanico.getName());
+		abanico.setMarca(abanico.getMarca());
+		abanico.setCreateAt(abanico.getCreateAt());
+		
+		AbanicoDao.save(abanico);
+	}
 }
