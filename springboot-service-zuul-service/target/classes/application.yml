@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: servicio-zuul-server 
+server:
+  port: 8090
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+zuul:
+  routes:
+    departamento:
+      service-id: service-DepartamentoAbanicos
+      path: /api/departamento/**
+    abanico:
+      service-id: service-audifonos
+      path: /api/audifonos/**
+    users:
+      service-id: servicio-usuarios
+      path: /api/us/**
+      
+      
