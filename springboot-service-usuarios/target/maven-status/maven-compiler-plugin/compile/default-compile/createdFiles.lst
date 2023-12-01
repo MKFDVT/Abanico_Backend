@@ -1,0 +1,3 @@
+com\microservice\usuarios\RepositoryConfig.class
+com\microservice\usuarios\SpringbootServiceUsuariosApplication.class
+com\microservice\usuarios\repository\UsuarioRepository.class
